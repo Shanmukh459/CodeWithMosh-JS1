@@ -28,3 +28,16 @@ function fizzBuzz(input) {
 }
 
 console.log(fizzBuzz(false))
+
+// Speed Limit
+function checkSpeed(speed) {
+  if(speed <= 74) return 'Ok'
+  const extraSpeed = speed - 70
+  const points = Math.floor(extraSpeed/5)
+  if(points > 12) {
+    return "Your License in suspended"
+  }
+  return points
+}
+
+console.log(checkSpeed(5))
