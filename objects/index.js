@@ -12,16 +12,6 @@ function showAddress(address) {
 
 showAddress(address)
 
-// constructor function
-function Address(street, city, zipCode) {
-  this.street = street
-  this.city = city
-  this.zipCode = zipCode
-}
-
-const another = new Address("1", "2", "3")
-console.log(another)
-
 // Factory function
 function createAddress(street, city, zipCode) {
   return {
@@ -32,3 +22,31 @@ function createAddress(street, city, zipCode) {
 }
 const factoryAdd = createAddress("a", "b", "c")
 console.log(factoryAdd)
+
+// constructor function
+function Address(street, city, zipCode) {
+  this.street = street
+  this.city = city
+  this.zipCode = zipCode
+}
+
+const another = new Address("1", "2", "3")
+console.log(another)
+
+// areEqual and areSame
+const address1 = new Address('a', 'b', 'c')
+const address2 = new Address('a', 'b', 'c')
+
+function areEqual(address1, address2) {
+  for(key in address1){
+    if(address1[key] !== address2[key]) return false
+  }
+  return true
+}
+
+function areSame(address1, address2) {
+  return address1 === address2
+}
+
+console.log(areEqual(address1, address2))
+console.log(areSame(address1, address2))
