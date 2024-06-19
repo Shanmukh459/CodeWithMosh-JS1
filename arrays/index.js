@@ -19,3 +19,15 @@ function includes(array, searchElement) {
 }
 
 console.log(includes(n, 2))
+
+// exclude or except
+const output = except(n, [2])
+console.log(output)
+
+function except(array, excluded) {
+  let out = []
+  for(let a of array) {
+    if(!excluded.includes(a)) out.push(a)
+  }
+return out
+}
