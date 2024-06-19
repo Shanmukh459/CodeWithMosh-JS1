@@ -8,3 +8,14 @@ function arrayFromRange(min, max) {
   }
   return n
 }
+
+const n = [1, 2, 3, 4]
+// Includes
+function includes(array, searchElement) {
+  for(a of array) {
+    if(a === searchElement) return true
+  }
+  return false
+}
+
+console.log(includes(n, 2))
