@@ -83,3 +83,15 @@ function sum(limit) {
 }
 
 sum(10)
+
+// show stars
+function showStars(rows) {
+  for(let i = 1; i <= rows; i++) {
+    let s = ''
+    for(let j=0; j<i;j++){
+      s += '*'
+    }
+    console.log(s)
+  }
+}
+showStars(5)
