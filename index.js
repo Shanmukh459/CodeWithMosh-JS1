@@ -62,3 +62,12 @@ function countTruthy(array) {
 }
 
 countTruthy([0, 1, 2, 4, 5, undefined])
+
+// show string props
+function showProperties(obj) {
+  for(let key in obj) {
+    if(typeof obj[key] === 'string') console.log(key, obj[key])
+  }
+}
+
+showProperties({title: "abc", profit: 2020})
