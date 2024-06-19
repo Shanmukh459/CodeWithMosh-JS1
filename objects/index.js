@@ -50,3 +50,19 @@ function areSame(address1, address2) {
 
 console.log(areEqual(address1, address2))
 console.log(areSame(address1, address2))
+
+// Blog Post
+const post = {
+  title: "abc",
+  body: "a body of post",
+  author: "xyz",
+  views: 30,
+  comments: [
+    {
+    author: "pqr",
+    body: "body of a comment"
+    }
+  ],
+  isLive: true
+}
+console.log(post)
