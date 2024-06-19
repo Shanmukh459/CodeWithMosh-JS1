@@ -11,3 +11,24 @@ function showAddress(address) {
 }
 
 showAddress(address)
+
+// constructor function
+function Address(street, city, zipCode) {
+  this.street = street
+  this.city = city
+  this.zipCode = zipCode
+}
+
+const another = new Address("1", "2", "3")
+console.log(another)
+
+// Factory function
+function createAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode
+  }
+}
+const factoryAdd = createAddress("a", "b", "c")
+console.log(factoryAdd)
