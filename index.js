@@ -71,3 +71,15 @@ function showProperties(obj) {
 }
 
 showProperties({title: "abc", profit: 2020})
+
+
+// sum of multiples of 3 and 5
+function sum(limit) {
+  let s = 0
+  for(let i= 0; i <= limit; i++) {
+    if(i%3 === 0 || i%5 === 0) s += i
+  }
+  console.log(s)
+}
+
+sum(10)
