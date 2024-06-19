@@ -10,5 +10,7 @@ console.log(a, b)
 
 // Landscape or potrait
 function isLandsscape(width, height) {
-  return width > height ? "Landscape" : "Potrait"
+  return width > height
 }
+
+isLandsscape(300, 500)
