@@ -51,3 +51,14 @@ function showNumbers(limit) {
 }
 
 showNumbers(10)
+
+// Count Truthy
+function countTruthy(array) {
+  let count = 0
+  for(let a of array) {
+    if(a) count++
+  }
+  console.log(count)
+}
+
+countTruthy([0, 1, 2, 4, 5, undefined])
