@@ -31,3 +31,18 @@ function except(array, excluded) {
   }
 return out
 }
+
+// moving numbers
+const num = [1, 2, 3, 4]
+const res = move(num, 3, 0)
+console.log(res)
+
+function move(arr, index, offset) {
+  if(index+offset >= arr.length || index+offset < 0) return console.error("Invalid offset")
+    
+  const array = [...arr]
+  const ele = array.splice(index, 1)
+  array.splice(index + offset, 0, ele[0])
+  
+  return array
+}
