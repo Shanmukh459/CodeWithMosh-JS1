@@ -58,3 +58,11 @@ function countOccurences(array, searchElement) {
   }, 0)
   return count
 }
+
+const newArray1 = [1, 2, 4, 5, 6, 8]
+console.log(getMax(newArray1))
+
+function getMax(array) {
+  if(array.length === 0) return undefined
+  return array.reduce((acc, cur) => acc > cur ? acc : cur)
+}
