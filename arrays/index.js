@@ -59,6 +59,7 @@ function countOccurences(array, searchElement) {
   return count
 }
 
+// find max element
 const newArray1 = [1, 2, 4, 5, 6, 8]
 console.log(getMax(newArray1))
 
@@ -66,3 +67,17 @@ function getMax(array) {
   if(array.length === 0) return undefined
   return array.reduce((acc, cur) => acc > cur ? acc : cur)
 }
+
+// Movies
+const movies = [
+  {title: 'a', year: 2018, rating: 4.5},
+  {title: 'b', year: 2018, rating: 4.7},
+  {title: 'c', year: 2018, rating: 3},
+  {title: 'd', year: 2017, rating: 4.5}
+]
+
+const titles = movies
+  .filter(m => m.year === 2018 && m.rating > 4)
+  .sort((a, b) => b.rating - a.rating)
+  .map(m => m.title)
+console.log(titles)
