@@ -46,3 +46,15 @@ function move(arr, index, offset) {
   
   return array
 }
+
+// countOccurences
+const newArray = [1, 2, 3, 4, 5, 1, 4, 4]
+console.log(countOccurences(newArray, 4))
+
+function countOccurences(array, searchElement) {
+  const count = array.reduce((accumulator, currentValue) => {
+    if(currentValue === searchElement) accumulator++
+    return accumulator
+  }, 0)
+  return count
+}
